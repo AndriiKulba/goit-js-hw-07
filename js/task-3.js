@@ -18,7 +18,7 @@ const images = [
 const galleryRef = document.querySelector("#gallery")
 const createLinksGalleryRef = image=>{
   const linkGalleryRef = document.createElement('li')
-  linkGalleryRef.insertAdjacentHTML('afterbegin',`<img src="${image.url}" alt="${image.alt}" />`);
+  linkGalleryRef.insertAdjacentHTML('beforeend',`<img src="${image.url}" alt="${image.alt}" />`);
   return linkGalleryRef
 }
 const linksGalleryRef = images.map(image => createLinksGalleryRef(image))
