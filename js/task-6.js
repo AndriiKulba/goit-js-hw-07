@@ -1,7 +1,9 @@
-const inputSymbolRef = document.querySelector("#validation-input")
+const inputSymbolRef = document.querySelector("#validation-input");
 
-function handleClick (event) {
-   event.target.value.length > inputSymbolRef.dataset.length ? inputSymbolRef.classList = "invalid":inputSymbolRef.classList = "valid"
+function handleClick(event) {
+  inputSymbolRef.classList = "invalid";
+  if (Number(inputSymbolRef.dataset.length) === event.target.value.length) {
+    inputSymbolRef.classList = "valid";
+  }
 }
-inputSymbolRef .addEventListener("input", handleClick);
-
+inputSymbolRef.addEventListener("input", handleClick);

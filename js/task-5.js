@@ -1,10 +1,13 @@
-const inputRef = document.querySelector("#name-input")
-const outputNameRef = document.querySelector("#name-output")
+const inputRef = document.querySelector("#name-input");
+const outputNameRef = document.querySelector("#name-output");
+const incognito = outputNameRef.textContent;
 
-
-inputRef.addEventListener('input', handleNameInput)
+inputRef.addEventListener("input", handleNameInput);
 
 function handleNameInput(event) {
-    
-    outputNameRef.textContent=event.target.value
+  if (event.target.value !== "") {
+    outputNameRef.textContent = event.target.value;
+  } else {
+    outputNameRef.textContent = incognito;
+  }
 }
