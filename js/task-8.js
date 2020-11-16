@@ -14,9 +14,7 @@ function createBoxes(amount) {
   inputControlRef.value;
 }
 
-function destroyBoxes() {
-  console.dir(1);
-}
+function destroyBoxes() {}
 
 btnRender.addEventListener("click", createBoxes);
 btnDestroy.addEventListener("click", destroyBoxes);
