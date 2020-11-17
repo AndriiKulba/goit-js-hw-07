@@ -6,4 +6,4 @@ function handleClick(event) {
     inputSymbolRef.classList = "valid";
   }
 }
-inputSymbolRef.addEventListener("input", handleClick);
+inputSymbolRef.addEventListener("blur", handleClick);
